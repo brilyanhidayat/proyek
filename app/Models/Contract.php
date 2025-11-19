@@ -18,12 +18,13 @@ class Contract extends Model
         'start',
         'end',
         'nomor_sr',
-        'plant',
-        'kontraktor',
+        'plant_id',
+        'kontraktor_id',
         'ammount',
         'worker',
         'remark',
-        'file'
+        'file',
+        'status'
         ];
     // add guaded
     protected $guarded = ['id'];

@@ -78,8 +78,12 @@ class ContractResource extends Resource
                   ->label('File Kontrak')
                   ->placeholder('File Kontrak')
                   ->openable()
-                  ->downloadable()
-                  ->required(),
+                  ->downloadable(),
+                  Select::make('status')
+                    ->options([
+                        'Active' => 'Active',
+                        'Non Active' => 'Non Active',
+                    ])
             ]);
     }
 
@@ -98,6 +102,7 @@ class ContractResource extends Resource
                 Tables\Columns\TextColumn::make('ammount')->money('idr'),
                 Tables\Columns\TextColumn::make('worker'),
                 Tables\Columns\TextColumn::make('remark'),
+                Tables\Columns\TextColumn::make('status'),
                 Tables\Columns\TextColumn::make('file'),
                 //
             ])
