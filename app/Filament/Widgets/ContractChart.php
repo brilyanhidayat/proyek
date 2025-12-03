@@ -8,7 +8,7 @@ use App\Models\Contract;
 
 class ContractChart extends ChartWidget
 {
-    protected static ?string $heading = 'Chart';
+    protected static ?string $heading = 'Contract Status';
     protected static ?int $sort = 20;
 
     protected function getData(): array
